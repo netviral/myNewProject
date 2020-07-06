@@ -27,5 +27,7 @@ res.redirect("/");
 });
 
 app.post("/removeItem",function(req,res){
-
+  var removedItemNumber= req.body.item;
+     tasks.splice(removedItemNumber,1);
+     res.redirect("/");
 });
